@@ -21,7 +21,43 @@ public class RottingOranges {
     }
 
     public int orangesRotting(int[][] grid) {
-        return 0;
+
+        int m = grid.length;
+        int n = grid[0].length;
+        int[] a = {-1, 1, 0, 0};
+        int[] b = {0, 0, -1, 1};
+        int[][][] t = new int[m][n][101];
+        int s = 0;
+
+        for (int i = 0; i < m; i++)
+            for (int j = 0; j < n; j++)
+                if (grid[i][j] == 1) s++;
+                else if (grid[i][j] == 2) t[i][j][1] = 1;
+
+        if (s == 0) return 0;
+
+        for (int k = 1; k < 100; k++)
+            for (int i = 0; i < m; i++)
+                for (int j = 0; j < n; j++)
+                    if (grid[i][j] == 2 && t[i][j][k] == 1) {
+
+                        t[i][j][k]++;
+
+                        for (int p = 0; p < 4; p++) {
+
+                            int x = i + a[p];
+                            int y = j + b[p];
+
+                            if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == 1) {
+
+                                if (t[x][y][k] == 0) t[x][y][k+1] = 1;
+                                grid[x][y] = 2;
+                                if (--s == 0) return k;
+                            }
+                        }
+                    }
+
+        return -1;
     }
 
 }

@@ -1,6 +1,8 @@
 package easy;
 
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /*
     Given a binary tree, return the bottom-up level order traversal of its nodes' values.
@@ -29,7 +31,41 @@ public class BinaryTreeLevelOrderTraversalII {
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
 
-        return null;
+        if (root == null) return new ArrayList<>();
+        Map<Integer, List<Integer>> m = new LinkedHashMap<>();
+        Map<TreeNode, Integer> h = new HashMap<>();
+        Queue<TreeNode> q = new LinkedList<>();
+        q.offer(root);
+        h.put(root, 0);
+        m.put(0, Arrays.asList(root.val));
+
+        while (!q.isEmpty()) {
+
+            TreeNode node = q.poll();
+            int x = 1 + h.get(node);
+            List<Integer> list = m.get(x);
+            if (list == null) list = new ArrayList<>();
+
+            if (node.left != null) {
+
+                q.offer(node.left);
+                h.put(node.left, x);
+                list.add(node.left.val);
+                m.put(x, list);
+            }
+
+            if (node.right != null) {
+
+                q.offer(node.right);
+                h.put(node.right, x);
+                list.add(node.right.val);
+                m.put(x, list);
+            }
+        }
+
+        List<List<Integer>> result = m.entrySet().stream().map(i -> i.getValue()).collect(Collectors.toList());
+        Collections.reverse(result);
+        return result;
     }
 
 }

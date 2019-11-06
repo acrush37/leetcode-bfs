@@ -1,5 +1,8 @@
 package easy;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /*
     In a binary tree, the root node is at depth 0, and children of each depth k node are at depth k+1.
 
@@ -31,7 +34,31 @@ public class CousinsInBinaryTree {
 
     public boolean isCousins(TreeNode root, int x, int y) {
 
-        return false;
+        int[] d = new int[101];
+        int[] p = new int[101];
+        Queue<TreeNode> q = new LinkedList<>();
+        q.offer(root);
+
+        while (!q.isEmpty()) {
+
+            TreeNode node = q.poll();
+
+            if (node.left != null) {
+
+                p[node.left.val] = node.val;
+                d[node.left.val] = 1 + d[node.val];
+                q.offer(node.left);
+            }
+
+            if (node.right != null) {
+
+                p[node.right.val] = node.val;
+                d[node.right.val] = 1 + d[node.val];
+                q.offer(node.right);
+            }
+        }
+
+        return d[x] == d[y] && p[x] != p[y];
     }
 
 }
