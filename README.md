@@ -10,6 +10,7 @@ Breadth First Search
 |1129|[Shortest Path with Alternating Colors](https://leetcode.com/problems/shortest-path-with-alternating-colors/)|[Java](src/medium/ShortestPathWithAlternatingColors.java)|Medium|
 |1091|[Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)|[Java](src/medium/ShortestPathInBinaryMatrix.java)|Medium|
 |909|[Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders/)|[Java](src/medium/SnakesAndLadders.java)|Medium|
+|787|[Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|[Java](src/medium/CheapestFlightsWithinKStops.java)|Medium|
 |752|[Open the Lock](https://leetcode.com/problems/open-the-lock/)|[Java](src/medium/OpenTheLock.java)|Medium|
 |429|[N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)|[Java](src/medium/NryTreeLevelOrderTraversal.java)|Medium|
 |417|[Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)|[Java](src/medium/PacificAtlanticWaterFlow.java)|Medium|
