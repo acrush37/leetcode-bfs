@@ -16,3 +16,4 @@ Breadth First Search
 |127|[Word Ladder](https://leetcode.com/problems/word-ladder/)|[Java](src/medium/WordLadder.java)|Medium|
 |103|[Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)|[Java](src/medium/BinaryTreeZigzagLevelOrderTraversal.java)|Medium|
 |102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)|[Java](src/medium/BinaryTreeLevelOrderTraversal.java)|Medium|
+|773|[Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle/)|[Java](src/hard/SlidingPuzzle.java)|Hard|
