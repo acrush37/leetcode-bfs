@@ -95,9 +95,8 @@ public class WordLadderII {
                 }
 
         boolean[] t = new boolean[n];
-        int[][] f = new int[100000][3];
+        int[][] f = new int[100000][2];
         int min = Integer.MAX_VALUE;
-        f[0][2] = -1;
         int x = -1;
         int y = 0;
 
@@ -110,14 +109,12 @@ public class WordLadderII {
 
                     f[++y][0] = z;
                     f[y][1] = 1 + f[x][1];
-                    f[y][2] = x;
                     min = f[y][1];
                 } else if (!t[z]) {
 
                     t[z] = true;
                     f[++y][0] = z;
                     f[y][1] = 1 + f[x][1];
-                    f[y][2] = x;
                 }
         }
 
