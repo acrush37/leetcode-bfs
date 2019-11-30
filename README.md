@@ -3,9 +3,9 @@ Breadth First Search
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|994|[Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)|[Java](src/easy/RottingOranges.java)|Easy|
-|993|[Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/)|[Java](src/easy/CousinsInBinaryTree.java)|Easy|
-|107|[Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[Java](src/easy/BinaryTreeLevelOrderTraversalII.java)|Easy|
+|773|[Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle/)|[Java](src/hard/SlidingPuzzle.java)|Hard|
+|675|[Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/)|[Java](src/hard/CutOffTreesForGolfEvent.java)|Hard|
+|126|[Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)|[Java](src/hard/WordLadderII.java)|Hard|
 |1162|[As Far from Land as Possible](https://leetcode.com/problems/as-far-from-land-as-possible/)|[Java](src/medium/AsFarFromLandAsPossible.java)|Medium|
 |1129|[Shortest Path with Alternating Colors](https://leetcode.com/problems/shortest-path-with-alternating-colors/)|[Java](src/medium/ShortestPathWithAlternatingColors.java)|Medium|
 |1091|[Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)|[Java](src/medium/ShortestPathInBinaryMatrix.java)|Medium|
@@ -19,5 +19,7 @@ Breadth First Search
 |127|[Word Ladder](https://leetcode.com/problems/word-ladder/)|[Java](src/medium/WordLadder.java)|Medium|
 |103|[Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)|[Java](src/medium/BinaryTreeZigzagLevelOrderTraversal.java)|Medium|
 |102|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)|[Java](src/medium/BinaryTreeLevelOrderTraversal.java)|Medium|
-|773|[Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle/)|[Java](src/hard/SlidingPuzzle.java)|Hard|
-|126|[Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)|[Java](src/hard/WordLadderII.java)|Hard|
+|994|[Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)|[Java](src/easy/RottingOranges.java)|Easy|
+|993|[Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/)|[Java](src/easy/CousinsInBinaryTree.java)|Easy|
+|107|[Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[Java](src/easy/BinaryTreeLevelOrderTraversalII.java)|Easy|
+
