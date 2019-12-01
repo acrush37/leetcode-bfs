@@ -3,6 +3,7 @@ Breadth First Search
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|1263|[Minimum Moves to Move a Box to Their Target Location](https://leetcode.com/problems/minimum-moves-to-move-a-box-to-their-target-location/)|[Java](src/hard/MinimumMovesToMoveBoxToTarget.java)|Hard|
 |847|[Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/)|[Java](src/hard/ShortestPathVisitingAllNodes.java)|Hard|
 |773|[Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle/)|[Java](src/hard/SlidingPuzzle.java)|Hard|
 |675|[Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/)|[Java](src/hard/CutOffTreesForGolfEvent.java)|Hard|
