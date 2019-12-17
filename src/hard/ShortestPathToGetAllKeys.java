@@ -71,8 +71,8 @@ public class ShortestPathToGetAllKeys {
                 d.addAll(c);
 
                 if (flag) {
+                    if (d.size() == keys-1) return 1+z;
                     d.add(f[u][v]);
-                    if (d.size() == keys) return 1+z;
                 }
 
                 t[u][v][p] = true;
