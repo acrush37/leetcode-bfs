@@ -20,7 +20,7 @@ public class ShortestPathToGetAllKeys {
 
     public static void main(String... args) {
 
-        String[] grid = {"@.a.#", "###.#", "b.A.B"};
+        String[] grid = {"Dd#b@",".fE.e","##.B.","#.cA.","aF.#C"};
         ShortestPathToGetAllKeys shortestPathToGetAllKeys = new ShortestPathToGetAllKeys();
         System.out.println(shortestPathToGetAllKeys.shortestPathAllKeys(grid));
     }
@@ -28,7 +28,8 @@ public class ShortestPathToGetAllKeys {
     public int shortestPathAllKeys(String[] grid) {
 
         int m = grid.length, n = grid[0].length(), keys = 0;
-        Queue<Object[]> q = new LinkedList<>();
+        boolean[][][][] t = new boolean[m][n][64][64];
+        Queue<Object[]> queue = new LinkedList<>();
         char[][] f = new char[m][n];
 
         for (int i = 0; i < m; i++) {
@@ -39,44 +40,54 @@ public class ShortestPathToGetAllKeys {
 
                 f[i][j] = c[j];
 
-                if (c[j] == '@') q.offer(new Object[]{i, j, 0, 0, new HashSet<>()});
-                else if (c[j] >= 'a' && c[j] <= 'f') keys++;
+                if (c[j] == '@') {
+                    t[i][j][0][0] = true;
+                    queue.offer(new Object[]{i, j, 0, new HashSet<>(), new HashSet<>()});
+                } else if (c[j] >= 'a' && c[j] <= 'f') keys++;
             }
         }
 
         if (keys == 0) return 0;
         int[] a = {-1, 1, 0, 0};
         int[] b = {0, 0, -1, 1};
-        boolean[][][] t = new boolean[m][n][64];
 
-        while (!q.isEmpty()) {
+        while (!queue.isEmpty()) {
 
-            Object[] o = q.poll();
+            Object[] o = queue.poll();
             int x = (int) o[0];
             int y = (int) o[1];
             int z = (int) o[2];
-            int s = (int) o[3];
-            Set<Character> c = (Set<Character>) o[4];
+            Set<Integer> c = (Set<Integer>) o[3];
+            Set<Integer> d = (Set<Integer>) o[4];
 
             for (int i = 0; i < 4; i++) {
 
                 int u = x + a[i];
                 int v = y + b[i];
                 if (u < 0 || u >= m || v < 0 || v >= n || f[u][v] == '#') continue;
-                if (f[u][v] >= 'A' && f[u][v] <= 'F' && !c.contains(f[u][v]+32)) continue;
-                boolean flag = f[u][v] >= 'a' && f[u][v] <= 'f' && !c.contains(f[u][v]);
-                int p = !flag ? s : s + (1 << (f[u][v] - 97));
-                if (t[u][v][p]) continue;
-                Set<Character> d = new HashSet<>();
-                d.addAll(c);
+                if (f[u][v] >= 'A' && f[u][v] <= 'F' && !d.contains(f[u][v]-65)) continue;
+                Set<Integer> upper = new HashSet<>();
+                Set<Integer> lower = new HashSet<>();
+                upper.addAll(c);
+                lower.addAll(d);
+                int p = 0;
+                int q = 0;
 
-                if (flag) {
-                    if (d.size() == keys-1) return 1+z;
-                    d.add(f[u][v]);
+                for (int j = 0; j <= 5; j++) {
+                    if (c.contains(j)) p += 1 << j;
+                    if (d.contains(j)) q += 1 << j;
                 }
 
-                t[u][v][p] = true;
-                q.offer(new Object[]{u, v, 1+z, p, d});
+                if (t[u][v][p][q]) continue;
+
+                if (f[u][v] >= 'A' && f[u][v] <= 'F') upper.add(f[u][v]-65);
+                else if (f[u][v] >= 'a' && f[u][v] <= 'f') {
+                    lower.add(f[u][v]-97);
+                    if (lower.size() == keys) return 1+z;
+                }
+
+                t[u][v][p][q] = true;
+                queue.offer(new Object[]{u, v, 1+z, upper, lower});
             }
         }
 
