@@ -40,14 +40,14 @@ public class ShortestPathToGetAllKeys {
                 f[i][j] = c[j];
 
                 if (c[j] == '@') q.offer(new Object[]{i, j, 0, 0, new HashSet<>()});
-                else if (c[j] >= 'a' && c[j] <= 'g') keys++;
+                else if (c[j] >= 'a' && c[j] <= 'f') keys++;
             }
         }
 
         if (keys == 0) return 0;
         int[] a = {-1, 1, 0, 0};
         int[] b = {0, 0, -1, 1};
-        boolean[][][] t = new boolean[m][n][128];
+        boolean[][][] t = new boolean[m][n][64];
 
         while (!q.isEmpty()) {
 
@@ -63,8 +63,8 @@ public class ShortestPathToGetAllKeys {
                 int u = x + a[i];
                 int v = y + b[i];
                 if (u < 0 || u >= m || v < 0 || v >= n || f[u][v] == '#') continue;
-                if (f[u][v] >= 'A' && f[u][v] <= 'G' && !c.contains(f[u][v]+32)) continue;
-                boolean flag = f[u][v] >= 'a' && f[u][v] <= 'g' && !c.contains(f[u][v]);
+                if (f[u][v] >= 'A' && f[u][v] <= 'F' && !c.contains(f[u][v]+32)) continue;
+                boolean flag = f[u][v] >= 'a' && f[u][v] <= 'f' && !c.contains(f[u][v]);
                 int p = !flag ? s : s + (1 << (f[u][v] - 97));
                 if (t[u][v][p]) continue;
                 Set<Character> d = new HashSet<>();
