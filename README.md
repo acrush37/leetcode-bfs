@@ -11,6 +11,7 @@ Breadth First Search
 |847|[Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/)|[Java](src/hard/ShortestPathVisitingAllNodes.java)|Hard|
 |773|[Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle/)|[Java](src/hard/SlidingPuzzle.java)|Hard|
 |675|[Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/)|[Java](src/hard/CutOffTreesForGolfEvent.java)|Hard|
+|488|[Zuma Game](https://leetcode.com/problems/zuma-game/)|[Java](src/hard/ZumaGame.java)|Hard|
 |126|[Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)|[Java](src/hard/WordLadderII.java)|Hard|
 |1319|[Number of Operations to Make Network Connected](https://leetcode.com/problems/number-of-operations-to-make-network-connected/)|[Java](src/medium/NumberOfOperationsMakeNetworkConnected.java)|Medium|
 |1311|[Get Watched Videos by Your Friends](https://leetcode.com/problems/get-watched-videos-by-your-friends/)|[Java](src/medium/GetWatchedVideosByYourFriends.java)|Medium|
