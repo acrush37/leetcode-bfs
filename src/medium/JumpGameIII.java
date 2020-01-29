@@ -1,6 +1,6 @@
 package medium;
 
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 /*
@@ -23,7 +23,7 @@ public class JumpGameIII {
         if (arr[start] == 0) return true;
         int n = arr.length;
         boolean[] t = new boolean[n];
-        Queue<Integer> q = new LinkedList<>();
+        Queue<Integer> q = new ArrayDeque<>();
         q.offer(start);
         t[start] = true;
 

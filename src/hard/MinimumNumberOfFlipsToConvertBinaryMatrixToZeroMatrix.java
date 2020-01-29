@@ -1,7 +1,6 @@
 package hard;
 
-import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 /*
@@ -35,7 +34,7 @@ public class MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix {
             }
 
         if (s == 0) return 0;
-        Queue<Object[]> q = new LinkedList<>();
+        Queue<Object[]> q = new ArrayDeque<>();
         q.offer(new Object[]{mat, 0, s});
         boolean[] t = new boolean[512];
         int[] a = {-1, 1, 0, 0};

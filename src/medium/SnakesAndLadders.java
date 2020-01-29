@@ -1,6 +1,6 @@
 package medium;
 
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 /*
@@ -31,7 +31,7 @@ public class SnakesAndLadders {
         int m = n * n;
         int[] f = new int[m+1];
         boolean[] t = new boolean[m+1];
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
 
         for (int i = n-1; i >= 0; i--)
             if (((n-i) & 1) == 1) for (int j = 0; j < n; j++) f[++k] = board[i][j];

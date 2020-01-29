@@ -1,7 +1,7 @@
 package medium;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.Queue;
 
 /*
@@ -25,9 +25,8 @@ public class OpenTheLock {
 
     private int bfs(boolean[] f, boolean[] t, int target) {
 
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
         int[] y = new int[4];
-        int[] z = new int[4];
         q.offer(new int[]{0, 0});
         t[0] = true;
 
@@ -45,7 +44,7 @@ public class OpenTheLock {
 
                 for (int j = 0; j < 2; j++) {
 
-                    z = Arrays.copyOf(y, 4);
+                    int[] z = Arrays.copyOf(y, 4);
                     z[i] = j == 0 ? (1 + z[i]) % 10 : (9 + z[i]) % 10;
                     int u = 1000 * z[0] + 100 * z[1] + 10 * z[2] + z[3];
                     if (u < 0 || u > 9999 || t[u] || f[u]) continue;

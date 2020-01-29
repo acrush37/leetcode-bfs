@@ -26,7 +26,7 @@ public class PacificAtlanticWaterFlow {
     private void bfs(int x, int y, int m, int n, int p, int[][] matrix, boolean[][][] t) {
 
         if (t[x][y][p]) return;
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
         int[] a = {-1, 1, 0, 0};
         int[] b = {0, 0, -1, 1};
         t[x][y][p] = true;

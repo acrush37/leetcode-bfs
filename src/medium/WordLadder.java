@@ -47,7 +47,7 @@ public class WordLadder {
             for (int j = i+1; j < n; j++)
                 f[i][j] = f[j][i] = transform(wordList.get(i), wordList.get(j));
 
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
         q.offer(new int[]{0, 1});
         t[0] = true;
 

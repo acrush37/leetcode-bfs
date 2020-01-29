@@ -1,6 +1,6 @@
 package medium;
 
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 /*
@@ -28,7 +28,7 @@ public class ShortestPathInBinaryMatrix {
         int n = grid.length;
         if (grid[0][0] == 1 || grid[n-1][n-1] == 1) return -1;
         if (n == 1) return 1;
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
         boolean[][] t = new boolean[n][n];
         int[] a = {-1, 1, 0, 0, 1, -1, 1, -1};
         int[] b = {0, 0, -1, 1, 1, -1, -1, 1};

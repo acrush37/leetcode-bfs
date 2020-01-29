@@ -33,7 +33,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
         if (root == null) return new ArrayList<>();
         Map<Integer, List<Integer>> m = new LinkedHashMap<>();
         Map<TreeNode, Integer> h = new HashMap<>();
-        Queue<TreeNode> q = new LinkedList<>();
+        Queue<TreeNode> q = new ArrayDeque<>();
         q.offer(root);
         h.put(root, 0);
         m.put(0, Arrays.asList(root.val));

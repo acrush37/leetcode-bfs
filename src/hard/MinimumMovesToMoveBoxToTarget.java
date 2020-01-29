@@ -1,6 +1,6 @@
 package hard;
 
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 /*
@@ -30,7 +30,7 @@ public class MinimumMovesToMoveBoxToTarget {
     private boolean push(int sx, int sy, int x, int y, int bx, int by, int m, int n, char[][] grid) {
 
         if (sx == x && sy == y) return true;
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
         boolean[][] t = new boolean[m][n];
         q.offer(new int[]{sx, sy});
         t[sx][sy] = true;
@@ -58,7 +58,7 @@ public class MinimumMovesToMoveBoxToTarget {
         int m = grid.length;
         int n = grid[0].length;
         boolean[][][] t = new boolean[m][n][4];
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
         int tx = 0, ty = 0, bx = 0, by = 0, sx = 0 ,sy = 0;
 
         for (int i = 0; i < m; i++)

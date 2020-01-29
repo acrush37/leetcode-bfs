@@ -1,6 +1,6 @@
 package hard;
 
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 /*
@@ -24,7 +24,7 @@ public class MinimumMovesToReachTargetWithRotations {
 
         int n = grid.length;
         boolean[][][] t = new boolean[n][n][2];
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
         q.offer(new int[]{0, 0, 0, 0});
         t[0][0][0] = true;
 

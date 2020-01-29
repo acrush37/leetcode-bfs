@@ -35,7 +35,7 @@ public class CutOffTreesForGolfEvent {
     private int bfs(int x, int y, int u, int v, int m, int n, int[][] f) {
 
         if (x == u && y == v) return 0;
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
         boolean[][] t = new boolean[m][n];
         q.offer(new int[]{0, x, y});
         int[] a = {-1, 1, 0, 0};

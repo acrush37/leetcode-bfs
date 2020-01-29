@@ -1,7 +1,7 @@
 package hard;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.Queue;
 
 /*
@@ -31,7 +31,7 @@ public class SlidingPuzzle {
         int s = 100000 * board[0][0] + 10000 * board[0][1] + 1000 * board[0][2]
                     + 100 * board[1][0] + 10 * board[1][1] + board[1][2];
         if (t[s]) return 0;
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
         int[][] a = {{2, 1, 3}, {3, 0, 2, 4}, {2, 1, 5}, {2, 0, 4}, {3, 1, 3, 5}, {2, 2, 4}};
         q.offer(new int[]{1, 2, 3, 4, 5, 0, 5, 0});
 

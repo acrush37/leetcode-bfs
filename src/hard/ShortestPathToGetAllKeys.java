@@ -1,9 +1,6 @@
 package hard;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 /*
     We are given a 2-dimensional grid. "." is an empty cell, "#" is a wall, "@" is the starting point, ("a", "b", ...) are keys, and ("A", "B", ...) are locks.
@@ -29,7 +26,7 @@ public class ShortestPathToGetAllKeys {
 
         int m = grid.length, n = grid[0].length(), keys = 0;
         boolean[][][][] t = new boolean[m][n][64][64];
-        Queue<Object[]> queue = new LinkedList<>();
+        Queue<Object[]> queue = new ArrayDeque<>();
         char[][] f = new char[m][n];
 
         for (int i = 0; i < m; i++) {

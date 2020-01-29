@@ -1,6 +1,6 @@
 package medium;
 
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 /*
@@ -27,7 +27,7 @@ public class AsFarFromLandAsPossible {
         int[][] c = new int[n][n];
         int[][] d = new int[n][n];
         boolean[][] t = new boolean[n][n];
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
         q.offer(new int[]{x, y, 0});
         t[x][y] = f[x][y] = true;
         c[x][y] = x;

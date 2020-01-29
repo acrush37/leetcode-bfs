@@ -66,13 +66,12 @@ public class KSimilarStrings {
 
                             char ch = c[i];c[i] = c[j];c[j] = ch;
                             String s = new String(c);
+                            ch = c[i];c[i] = c[j];c[j] = ch;
 
                             if (!t.contains(s)) {
                                 t.add(s);
                                 q.offer(new Object[]{depth+1, s});
                             }
-
-                            ch = c[i];c[i] = c[j];c[j] = ch;
                         }
                 }
 

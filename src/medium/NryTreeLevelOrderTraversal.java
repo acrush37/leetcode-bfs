@@ -40,7 +40,7 @@ public class NryTreeLevelOrderTraversal {
         if (root == null) return new ArrayList<>();
         Map<Integer, List<Integer>> m = new LinkedHashMap<>();
         Map<Node, Integer> h = new HashMap<>();
-        Queue<Node> q = new LinkedList<>();
+        Queue<Node> q = new ArrayDeque<>();
         q.offer(root);
         h.put(root, 0);
         m.put(0, Arrays.asList(root.val));

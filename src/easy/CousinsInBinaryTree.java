@@ -1,6 +1,6 @@
 package easy;
 
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 /*
@@ -36,7 +36,7 @@ public class CousinsInBinaryTree {
 
         int[] d = new int[101];
         int[] p = new int[101];
-        Queue<TreeNode> q = new LinkedList<>();
+        Queue<TreeNode> q = new ArrayDeque<>();
         q.offer(root);
 
         while (!q.isEmpty()) {

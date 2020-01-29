@@ -1,6 +1,6 @@
 package medium;
 
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 /*
@@ -22,7 +22,7 @@ public class ShortestPathWithAlternatingColors {
 
     private int bfs(int target, int n, boolean[][][] f) {
 
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
         boolean[][][] t = new boolean[n][n][2];
         q.offer(new int[]{0, 0, 0});
         q.offer(new int[]{0, 0, 1});

@@ -34,7 +34,7 @@ public class GetWatchedVideosByYourFriends {
         int n = friends.length;
         boolean[] t = new boolean[n];
         Set<Integer>[] f = new Set[n];
-        Queue<int[]> q = new LinkedList<>();
+        Queue<int[]> q = new ArrayDeque<>();
         Map<String, Integer> m = new HashMap<>();
         q.offer(new int[]{id, 0});
         t[id] = true;
