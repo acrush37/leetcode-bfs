@@ -3,6 +3,7 @@ Breadth First Search
 
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
+|1345|[Jump Game IV](https://leetcode.com/problems/jump-game-iv/)|[Java](src/hard/JumpGameIV.java)|Hard|
 |1298|[Maximum Candies You Can Get from Boxes](https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes/)|[Java](src/hard/MaximumCandiesGetFromBoxes.java)|Hard|
 |1284|[Minimum Number of Flips to Convert Binary Matrix to Zero Matrix](https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/)|[Java](src/hard/MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix.java)|Hard|
 |1263|[Minimum Moves to Move a Box to Their Target Location](https://leetcode.com/problems/minimum-moves-to-move-a-box-to-their-target-location/)|[Java](src/hard/MinimumMovesToMoveBoxToTarget.java)|Hard|
