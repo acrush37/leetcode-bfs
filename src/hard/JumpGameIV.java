@@ -16,7 +16,7 @@ public class JumpGameIV {
 
     public static void main(String... args) {
 
-        int[] arr = {11,22,7,7,7,7,7,7,7,22,13};
+        int[] arr = {6, 1, 9};
         JumpGameIV jumpGameIV = new JumpGameIV();
         System.out.println(jumpGameIV.minJumps(arr));
     }
@@ -42,8 +42,7 @@ public class JumpGameIV {
             int y = x[0] + 1, z = x[0] - 1;
 
             if (!t[y]) {
-
-                if (x[0] == n-2) return x[1];
+                if (y == n-1) return x[1];
                 t[y] = true;
                 q.offer(new int[]{y, 1 + x[1]});
             }
@@ -54,18 +53,15 @@ public class JumpGameIV {
             }
 
             List<Integer> f = m.get(arr[x[0]]);
+            if (!f.isEmpty() && f.get(f.size()-1) == n-1) return x[1];
 
-            while (!f.isEmpty()) {
-
-                y = f.remove(f.size() - 1);
-
-                if (!t[y]) {
-
-                    if (y == n-1) return x[1];
-                    t[y] = true;
-                    q.offer(new int[]{y, 1 + x[1]});
+            for (int k : f)
+                if (!t[k]) {
+                    t[k] = true;
+                    q.offer(new int[]{k, 1 + x[1]});
                 }
-            }
+
+            f.clear();
         }
 
         return 0;
